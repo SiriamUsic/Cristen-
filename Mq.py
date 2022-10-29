@@ -4,9 +4,7 @@ from config import call_py
 from Miq.التشغيل import arq
 async def main():
     await call_py.start()
-    print("""    ------------------
-   | ميوزك كرستين  الان شغال ! |
-    ------------------"""    )
+    print("""تم تنصيب سورس جافا بنجاح"""    )
     await idle()
     await arq.close()
 loop = asyncio.get_event_loop()
