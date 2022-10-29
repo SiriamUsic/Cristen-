@@ -34,43 +34,42 @@ async def restart(client, m: Message):
     await loli.edit("7")
     await loli.edit("8")
     await loli.edit("9")
-    await loli.edit("**✅ تم اعاده تشغيل بوت كرستين**")
+    await loli.edit("**✅ تم اعاده تشغيل بوت جـافـا**")
     os.execl(sys.executable, sys.executable, *sys.argv)
     quit()
-@Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر","اوامر كرستين"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.user(SUDO_USERS) & filters.command(["اوامر","اوامر جافا"], prefixes=f"{HNDLR}"))
 @authorized_users_only
 async def help(client, m: Message):
     await m.delete()
     HELP = f"""
 <b>👋 اهلا {m.from_user.mention}!
 
-𝘰𝘳𝘥𝘦𝘳𝘴 ς.ᖇ ຮ๏ʊᖇς℮
-✛┈┉━｢ ᥴ.𝘳 𝘴ꪮꪊ𝘳ᥴꫀ ｣━┅┈✛
+𝘰𝘳𝘥𝘦𝘳𝘴 JAVA
+✛┈┉━｢ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ｣━┅┈✛
 
 👈 | لتشغيل صوتية في المكالمة أرسل ⇦ [ `{HNDLR}شغل  + اسم الاغنيه + او الرابط من يوتيوب` ]
 👈 | لتشغيل فيديو في المكالمة  ⇦ [ `{HNDLR}تشغيل_فيديو  + اسم الاغنيه + او الرابط من اليوتيوب` ]
-✛┈┉━｢ ᥴ.𝘳 𝘴ꪮꪊ𝘳ᥴꫀ ｣━┅┈✛
+✛┈┉━｢ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ｣━┅┈✛
 
 👈 | لأيقاف الصوت او الفيديو مؤقتآ  ⇦ [ `{HNDLR}اسكت` ] 
 👈 | لأعاده تشغيل الصوت ⇦  [ `{HNDLR}اسكت_كمل` ]
 👈 | لأيقاف الصوت  ⇦ [ `{HNDLR}اسكت` ] 
-✛┈┉━｢ ᥴ.𝘳 𝘴ꪮꪊ𝘳ᥴꫀ ｣━┅┈✛
+✛┈┉━｢ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ｣━┅┈✛
 
 👈 | لتحميل صوتية أرسل ⇦ [ `{HNDLR}تحميل + اسم الاغنيه او الرابط` ]
 👈 | لتحميل فيديو  ⇦  [ `{HNDLR}تحميل_فيديو + اسم الاغنيه او الرابط` ]
-✛┈┉━｢ ᥴ.𝘳 𝘴ꪮꪊ𝘳ᥴꫀ ｣━┅┈✛
+✛┈┉━｢ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ｣━┅┈✛
 
 👈 | لأعاده تشغيل السورس  ⇦  [ `{HNDLR}ريستارت` ]
-✛┈┉━｢ ᥴ.𝘳 𝘴ꪮꪊ𝘳ᥴꫀ ｣━┅┈✛
- مطور سورس كرستين  : @wjj_u 
-قناة السورس:  @cr_source"""
+✛┈┉━｢ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐉𝐀𝐕𝐀 ｣━┅┈✛
+ مطور التليثون  : @Salah_officiall 
+قناة السورس:  @JAVA_tlethon"""
     await m.reply(HELP)
 @Client.on_message(filters.command(["الريبو"], prefixes=f"{HNDLR}"))
 async def repo(client, m: Message):
     await m.delete()
     REPO = f"""
 <b>👋  اهلا {m.from_user.mention}!
-- للمطور : @wjj_u 
-@cr_source 
+- للمطور : @Salah_officiall
 """
     await m.reply(REPO, disable_web_page_preview=True)
